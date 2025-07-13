@@ -1,0 +1,21 @@
+ # Write a Python program that:
+# 1.   Takes user input and writes it to a file named output.txt.
+# 2.   Appends additional data to the same file.
+# 3.   Reads and displays the final content of the file.
+
+user_input = input("Enter some text to write in file: ")
+file = open('output.txt','w')
+writing_name = file.write("Hello! " + user_input + " \n")
+print(writing_name)
+file.close()
+
+additional_input = input("Add some more lines to your data file: ")
+file = open('output.txt','a')
+writing_file = file.write(additional_input)
+print(writing_file)
+file.close()
+
+file = open('output.txt','r')
+reading_file = file.read()
+print(reading_file)
+file.close()
