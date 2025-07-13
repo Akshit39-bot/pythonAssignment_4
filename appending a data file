@@ -3,19 +3,28 @@
 # 2.   Appends additional data to the same file.
 # 3.   Reads and displays the final content of the file.
 
+
 user_input = input("Enter some text to write in file: ")
-file = open('output.txt','w')
-writing_name = file.write("Hello! " + user_input + " \n")
+file = open('output.txt','w')            # (open('file_name', 'w(write mode)' used to open the text file and write text into the file.)
+
+writing_name = file.write("Hello! " + user_input + " \n")       # (file_name.write() writes the text into existing text file.)
+
 print(writing_name)
-file.close()
+
+file.close()            # (it is used to close the file.)
+
 
 additional_input = input("Add some more lines to your data file: ")
-file = open('output.txt','a')
-writing_file = file.write(additional_input)
+file = open('output.txt','a')      # (append mode is used for writing or adding some text to the existing text file.)
+
+writing_file = file.write(additional_input)     # (write the text into the text file.)
+
 print(writing_file)
 file.close()
 
 file = open('output.txt','r')
-reading_file = file.read()
-print(reading_file)
+reading_file = file.read()       # (file.read() is used to read the text file.)
+
+print(reading_file)    # (prints the text written in the file.)
+
 file.close()
