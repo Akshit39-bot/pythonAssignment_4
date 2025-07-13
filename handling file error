@@ -1,14 +1,16 @@
 #  Task 1: Read a File and Handle Errors
 
-try:
+try:           # ( try function is used to open the sample.txt file.)
+
     with open('sample.txt','r') as file:
 
         for line in file:
 
-            print(line.strip())
+            print(line.strip())           # (line.strip() is used to print the lines number wise.)
 
               
-except FileNotFoundError:
+except FileNotFoundError:              # (except is used to print another line in place of error or FileNotFoundError.)
+
 
     print("Error: The file 'sample.txt' was not found")
       
